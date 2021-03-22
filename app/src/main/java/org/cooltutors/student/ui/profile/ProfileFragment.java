@@ -19,6 +19,7 @@ import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 
 import org.cooltutors.student.LogInActivity;
+import org.cooltutors.student.MainActivity;
 import org.cooltutors.student.R;
 import org.cooltutors.student.network.AsyncConnectionLoader;
 import org.cooltutors.student.network.JsonHelpers;
@@ -95,13 +96,16 @@ public class ProfileFragment extends Fragment implements LoaderManager.LoaderCal
             baseUrl = args.getString("baseUrl");
         }
         Uri builtURI = Uri.parse(baseUrl).buildUpon().build();
-        //loadingSpinner.setVisibility(View.VISIBLE);
+
+        MainActivity.me.showSpinner();
+
         return new AsyncConnectionLoader(getContext(), builtURI);
     }
 
     @Override
     public void onLoadFinished(@NonNull @NotNull Loader<String> loader, String data) {
-        //loadingSpinner.setVisibility(View.INVISIBLE);
+        MainActivity.me.hideSpinner();
+
         // ===========================================================================
         String jsonError = JsonHelpers.hasError(LOG_TAG, data);
         if (!jsonError.isEmpty()) {
@@ -135,6 +139,7 @@ public class ProfileFragment extends Fragment implements LoaderManager.LoaderCal
             userPhone2.setText(member.phone2);
             userEmail.setText(member.email);
         }
+
     }
 
     @Override

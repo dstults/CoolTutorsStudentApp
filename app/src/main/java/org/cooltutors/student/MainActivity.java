@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Declarations
     public static MainActivity me;
+    private ProgressBar loadingSpinner;
 
     // Creation
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         ActionBar actionBar = getSupportActionBar();
         CustomTheme customTheme = new CustomTheme(this.getColor(R.color.background_dark), this.getColor(R.color.background_light), actionBar);
+        loadingSpinner = findViewById(R.id.main_loading_spinner);
 
         // Set nav bar background color
         navView.setBackgroundColor(customTheme.backgroundDark);
@@ -46,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+    }
+
+    public void showSpinner() {
+        loadingSpinner.setVisibility(View.VISIBLE);
+    }
+
+    public void hideSpinner() {
+        loadingSpinner.setVisibility(View.INVISIBLE);
     }
 
 }
