@@ -36,13 +36,15 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="login_name">Login Name</string>
     <string name="password">Password</string>
-    <string name="demo_1">Demo 1</string>
-    <string name="demo_2">Demo 2</string>
+    <string name="register_new_user"><u>Register New User</u></string>
     <string name="log_in">Log In</string>
-    <string name="demo_3">Demo 3</string>
-    <string name="bad_json">Bad JSON</string>
+    <string name="demo_1">Admin Demo</string>
+    <string name="demo_2">Teacher Demo</string>
+    <string name="demo_3">Student Demo</string>
+
     <string name="provide_login_name">Please provide login name.</string>
     <string name="provide_password">Please provide password.</string>
     <string name="no_network">Not connected to Internet.</string>
+    <string name="bad_json">Bad JSON</string>
 
 </resources>
