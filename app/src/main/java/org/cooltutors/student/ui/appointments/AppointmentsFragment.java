@@ -23,6 +23,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.cooltutors.student.LogInActivity;
+import org.cooltutors.student.MainActivity;
 import org.cooltutors.student.R;
 import org.cooltutors.student.network.AppointmentsReply;
 import org.cooltutors.student.network.AsyncConnectionLoader;
@@ -44,7 +45,6 @@ public class AppointmentsFragment extends Fragment implements LoaderManager.Load
     private RecyclerView appointmentRecycler;
     private Button appointmentsToggleButton;
     private TextView appointmentTypeLabel;
-    private ProgressBar loadingSpinner;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -70,7 +70,6 @@ public class AppointmentsFragment extends Fragment implements LoaderManager.Load
         }
 
         // Views
-        //loadingSpinner = view.findViewById(R.id.main_loading_spinner);
         appointmentRecycler = view.findViewById(R.id.appointment_recycler);
         appointmentsToggleButton = view.findViewById(R.id.button_past_appointments);
         appointmentTypeLabel = view.findViewById(R.id.label_appointment_type);
@@ -117,13 +116,16 @@ public class AppointmentsFragment extends Fragment implements LoaderManager.Load
             baseUrl = args.getString("baseUrl");
         }
         Uri builtURI = Uri.parse(baseUrl).buildUpon().build();
-        //loadingSpinner.setVisibility(View.VISIBLE);
+
+        MainActivity.me.showSpinner();
+
         return new AsyncConnectionLoader(getContext(), builtURI);
     }
 
     @Override
     public void onLoadFinished(@NonNull @NotNull Loader<String> loader, String data) {
-        //loadingSpinner.setVisibility(View.INVISIBLE);
+        MainActivity.me.hideSpinner();
+
         // ===========================================================================
         String jsonError = JsonHelpers.hasError(LOG_TAG, data);
         if (!jsonError.isEmpty()) {
@@ -139,7 +141,6 @@ public class AppointmentsFragment extends Fragment implements LoaderManager.Load
             startActivity(i);
             return;
         }
-        Log.d("!!", "C yay?!");
         // ===========================================================================
         // Add Appointment Data to Fragment
         // ---------------------------------------------------------------------------

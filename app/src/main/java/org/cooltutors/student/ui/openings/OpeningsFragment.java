@@ -74,12 +74,16 @@ public class OpeningsFragment extends Fragment implements LoaderManager.LoaderCa
             baseUrl = args.getString("baseUrl");
         }
         Uri builtURI = Uri.parse(baseUrl).buildUpon().build();
-        //loadingSpinner.setVisibility(View.VISIBLE);
+
+        MainActivity.me.showSpinner();
+
         return new AsyncConnectionLoader(getContext(), builtURI);
     }
 
     @Override
     public void onLoadFinished(@NonNull @NotNull Loader<String> loader, String data) {
+        MainActivity.me.hideSpinner();
+
         //loadingSpinner.setVisibility(View.INVISIBLE);
         // ===========================================================================
         String jsonError = JsonHelpers.hasError(LOG_TAG, data);
