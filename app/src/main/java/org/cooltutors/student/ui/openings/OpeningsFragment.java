@@ -48,14 +48,9 @@ public class OpeningsFragment extends Fragment implements LoaderManager.LoaderCa
         super.onViewCreated(view, savedInstanceState);
 
         // Views
-        //loadingSpinner = view.findViewById(R.id.main_loading_spinner);
         openingRecycler = view.findViewById(R.id.opening_recycler);
 
-        // Recycler
-        //openingRecyclerAdapter = new OpeningRecyclerAdapter(openingList, this);
-        //openingRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        //openingRecycler.setAdapter(openingRecyclerAdapter);
-
+        // Wait until view is loaded to try to buffer data
         getAllOpenings();
     }
 
@@ -74,13 +69,16 @@ public class OpeningsFragment extends Fragment implements LoaderManager.LoaderCa
             baseUrl = args.getString("baseUrl");
         }
         Uri builtURI = Uri.parse(baseUrl).buildUpon().build();
-        //loadingSpinner.setVisibility(View.VISIBLE);
+
+        MainActivity.me.showSpinner();
+
         return new AsyncConnectionLoader(getContext(), builtURI);
     }
 
     @Override
     public void onLoadFinished(@NonNull @NotNull Loader<String> loader, String data) {
-        //loadingSpinner.setVisibility(View.INVISIBLE);
+        MainActivity.me.hideSpinner();
+
         // ===========================================================================
         String jsonError = JsonHelpers.hasError(LOG_TAG, data);
         if (!jsonError.isEmpty()) {

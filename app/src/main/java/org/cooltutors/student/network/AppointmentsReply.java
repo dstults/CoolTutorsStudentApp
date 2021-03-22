@@ -23,8 +23,8 @@ public class AppointmentsReply {
 
         // Format: Array of 2 Arrays of N Appointment Objects
 
-        pastAppointments.clear();
-        futureAppointments.clear();
+        //pastAppointments.clear();
+        //futureAppointments.clear();
 
         try {
             JSONArray outerArray = new JSONArray(jsonData);

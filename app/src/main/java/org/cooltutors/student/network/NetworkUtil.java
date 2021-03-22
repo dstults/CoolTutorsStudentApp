@@ -23,7 +23,7 @@ public class NetworkUtil {
     private static final String LOG_TAG = NetworkUtil.class.getSimpleName();
 
     public static final String WEBSITE_BASE_URL = "https://cooltutors.org";
-    public static final String WEBSITE_BASE_URL2 = "http://darrens.lwtech-csd297.com";
+    public static final String WEBSITE_BASE_URL2 = "http://darrens.lwtech-csd297.com"; // backup
     public static final String WEBSITE_URL_LOGIN = WEBSITE_BASE_URL + "/log_in?json";
     public static final String WEBSITE_URL_LOGOUT = WEBSITE_BASE_URL + "/log_out?json";
     public static final String WEBSITE_URL_SERVICES = WEBSITE_BASE_URL + "/services?json";
