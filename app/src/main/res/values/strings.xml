@@ -4,8 +4,8 @@
     <string name="title_services">Services</string>
     <string name="title_openings">Openings</string>
     <string name="title_appointments">Appointments</string>
-    <string name="label_upcoming_appointments">Upcoming Appointments</string>
-    <string name="label_past_appointments">Past Appointments</string>
+    <string name="title_upcoming_appointments">Upcoming Appointments</string>
+    <string name="title_past_appointments">Past Appointments</string>
     <string name="title_profile">Profile</string>
 
     <string name="label_id">ID:</string>
@@ -15,25 +15,18 @@
     <string name="label_to">To:</string>
     <string name="label_student">Student:</string>
     <string name="label_instructor">Instructor:</string>
-
     <string name="label_display_name">Display Name:</string>
     <string name="label_login_name">Login Name:</string>
     <string name="label_birthdate">Birthdate:</string>
     <string name="label_phone2">Phone 2:</string>
-    <string name="empty_string_value">-</string>
     <string name="label_email">E-Mail:</string>
     <string name="label_phone1">Phone 1:</string>
+    <string name="label_instructors">Instructors:</string>
+    <string name="empty_string_value">-</string>
 
     <string name="label_log_out">Log Out</string>
     <string name="title_activity_log_in">CoolTutors.org Log In</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="login_name">Login Name</string>
     <string name="password">Password</string>
     <string name="register_new_user"><u>Register New User</u></string>
@@ -46,5 +39,6 @@
     <string name="provide_password">Please provide password.</string>
     <string name="no_network">Not connected to Internet.</string>
     <string name="bad_json">Bad JSON</string>
+    <string name="service_image">Service image</string>
 
 </resources>

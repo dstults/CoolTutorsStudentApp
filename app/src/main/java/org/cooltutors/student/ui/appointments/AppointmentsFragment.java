@@ -1,16 +1,13 @@
 package org.cooltutors.student.ui.appointments;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -74,12 +71,6 @@ public class AppointmentsFragment extends Fragment implements LoaderManager.Load
         appointmentsToggleButton = view.findViewById(R.id.button_past_appointments);
         appointmentTypeLabel = view.findViewById(R.id.label_appointment_type);
 
-        // Recycler
-        //appointmentRecyclerAdapterPast = new AppointmentRecyclerAdapter(appointmentListPast, this);
-        //appointmentRecyclerAdapterFuture = new AppointmentRecyclerAdapter(appointmentListFuture, this);
-        //appointmentRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        //appointmentRecycler.setAdapter(appointmentRecyclerAdapterFuture);
-
         // Listeners
         appointmentsToggleButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -92,12 +83,12 @@ public class AppointmentsFragment extends Fragment implements LoaderManager.Load
     private void swapAdapter() {
         if (appointmentRecycler.getAdapter().equals(appointmentRecyclerAdapterFuture)) {
             appointmentRecycler.setAdapter(appointmentRecyclerAdapterPast);
-            appointmentTypeLabel.setText(getText(R.string.label_past_appointments));
-            appointmentsToggleButton.setText(getText(R.string.label_upcoming_appointments));
+            appointmentTypeLabel.setText(getText(R.string.title_past_appointments));
+            appointmentsToggleButton.setText(getText(R.string.title_upcoming_appointments));
         } else {
             appointmentRecycler.setAdapter(appointmentRecyclerAdapterFuture);
-            appointmentTypeLabel.setText(getText(R.string.label_upcoming_appointments));
-            appointmentsToggleButton.setText(getText(R.string.label_past_appointments));
+            appointmentTypeLabel.setText(getText(R.string.title_upcoming_appointments));
+            appointmentsToggleButton.setText(getText(R.string.title_past_appointments));
         }
     }
 

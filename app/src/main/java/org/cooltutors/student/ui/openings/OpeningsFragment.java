@@ -48,14 +48,9 @@ public class OpeningsFragment extends Fragment implements LoaderManager.LoaderCa
         super.onViewCreated(view, savedInstanceState);
 
         // Views
-        //loadingSpinner = view.findViewById(R.id.main_loading_spinner);
         openingRecycler = view.findViewById(R.id.opening_recycler);
 
-        // Recycler
-        //openingRecyclerAdapter = new OpeningRecyclerAdapter(openingList, this);
-        //openingRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        //openingRecycler.setAdapter(openingRecyclerAdapter);
-
+        // Wait until view is loaded to try to buffer data
         getAllOpenings();
     }
 
@@ -84,7 +79,6 @@ public class OpeningsFragment extends Fragment implements LoaderManager.LoaderCa
     public void onLoadFinished(@NonNull @NotNull Loader<String> loader, String data) {
         MainActivity.me.hideSpinner();
 
-        //loadingSpinner.setVisibility(View.INVISIBLE);
         // ===========================================================================
         String jsonError = JsonHelpers.hasError(LOG_TAG, data);
         if (!jsonError.isEmpty()) {

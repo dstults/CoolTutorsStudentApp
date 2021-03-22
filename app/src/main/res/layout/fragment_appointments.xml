@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/label_upcoming_appointments"
+        android:text="@string/title_upcoming_appointments"
         android:textAlignment="center"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
         android:layout_gravity="center"
         android:layout_marginVertical="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/label_past_appointments"
+        android:text="@string/title_past_appointments"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

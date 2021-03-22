@@ -25,7 +25,7 @@ public class OpeningsReply {
 
         // Format: Array of n1=5 x [7 days x [ n2 x openings ] ]
 
-        allOpenings.clear();
+        //allOpenings.clear();
 
         try {
             JSONArray severalWeeks = new JSONArray(jsonData);
