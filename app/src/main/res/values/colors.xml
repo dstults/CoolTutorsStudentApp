@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Darren Stults -->
+
+<!-- I'm going to go against convention here but that's because most
+custom-theme friendly functions didn't exist until API 21 and this is
+compatible with API 19.
+
+I'm naming my "colors" after what they really are replacing in my
+custom theme code at the start of MainActivity.java. -->
+
+<resources>
+    <color name="white_peach">#FFE4C9</color>
+    <color name="light_peach">#FFD9A2</color>
+    <color name="faded_orange">#DCAE6A</color>
+    <color name="faded_blue">#6AAEDC</color>
+    <color name="background_light">#FFD9C6</color>
+    <color name="background_light_blue">#C6D9FF</color>
+    <color name="background_really_light_yellow">#FFFFC2</color>
+    <color name="background_dark">#FFBB96</color>
+    <color name="dark_brown">#32281E</color>
+    <color name="gray">#FF555555</color>
+    <color name="black">#FF000000</color>
+
+
+    <!--debug use:-->
+    <color name="dbg_red">#FF0000</color>
+    <color name="dbg_green">#00FF00</color>
+    <color name="dbg_blue">#0000FF</color>
+    <color name="dbg_yellow">#FFFF00</color>
+    <color name="dbg_magenta">#FF00FF</color>
+    <color name="dbg_cyan">#00FFFF</color>
+</resources>

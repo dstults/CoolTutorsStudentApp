@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_services">
+
+    <fragment
+        android:id="@+id/navigation_services"
+        android:name="org.cooltutors.student.ui.services.ServicesFragment"
+        android:label="@string/title_services"
+        android:titleTextColor="@color/black"
+        tools:layout="@layout/fragment_services" />
+
+    <fragment
+        android:id="@+id/navigation_openings"
+        android:name="org.cooltutors.student.ui.openings.OpeningsFragment"
+        android:label="@string/title_openings"
+        tools:layout="@layout/fragment_openings" />
+
+    <fragment
+        android:id="@+id/navigation_appointments"
+        android:name="org.cooltutors.student.ui.appointments.AppointmentsFragment"
+        android:label="@string/title_appointments"
+        tools:layout="@layout/fragment_appointments" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="org.cooltutors.student.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

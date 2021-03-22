@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CoolTutorsStudentApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dark_brown
+        </item> <!-- This sets the buttons, not like it sounds... -->
+        <item name="colorPrimaryVariant">@color/black
+        </item> <!-- This sets the status bar color, not like it sounds... -->
+        <item name="colorOnPrimary">@color/white_peach</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/dbg_green</item>
+        <item name="colorSecondaryVariant">@color/dbg_cyan</item>
+        <item name="colorOnSecondary">@color/dbg_blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <!-- This sets the text, just like it sounds: -->
+        <item name="android:textColor">@color/black</item>
+        <!-- This sets the main background, just like it sounds: -->
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:actionBarStyle">@style/MyTheme.ActionBarStyle</item>
+
+        <!-- Debug -->
+        <item name="android:titleTextStyle">@color/dbg_magenta</item>
+        <item name="android:colorForeground">@color/dbg_red</item>
+        <item name="colorAccent">@color/dbg_yellow</item>
+        <item name="color">@color/dbg_green</item>
+        <item name="colorButtonNormal">@color/dbg_cyan</item>
+        <item name="colorSurface">@color/dbg_blue</item>
+    </style>
+
+    <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyTheme.ActionBarStyle</item>
+    </style>
+
+    <style name="MyTheme.ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/dbg_red</item>
+    </style>
+
+    <style name="Theme.CoolTutorsStudentApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.CoolTutorsStudentApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.CoolTutorsStudentApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
