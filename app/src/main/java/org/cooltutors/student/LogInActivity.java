@@ -35,6 +35,8 @@ public class LogInActivity extends AppCompatActivity implements LoaderManager.Lo
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
+        SharedPrefs.initialize(this);
+
         loginNameText = findViewById(R.id.login_name);
         passwordText = findViewById(R.id.login_password);
         loadingSpinner = findViewById(R.id.login_loading_spinner);

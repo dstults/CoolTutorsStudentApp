@@ -11,10 +11,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.cooltutors.student.MainActivity;
 import org.cooltutors.student.R;
+import org.cooltutors.student.SharedPrefs;
 
 import java.util.List;
 
@@ -108,11 +110,15 @@ public class ServiceRecyclerAdapter extends RecyclerView.Adapter<ServiceRecycler
             holder.instructorHolder.addView(newView);
             String instructor = instructors.get(i);
             newView.setText(instructor);
-            //newView.setVisibility(View.VISIBLE);
             newView.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    //TODO
                     Toast.makeText(holder.instructorHolder.getContext(), "You clicked on " + instructor + "!", Toast.LENGTH_SHORT).show();
+                    SharedPrefs.setSelectedMember(instructor);
+                    /*MainActivity.me.getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.nav_host_fragment, MainActivity.me.getFragmentManager().findFragmentById(R.layout.fragment_openings))
+                            .commit();*/
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_services_to_navigation_openings);
                 }
             });
         }
