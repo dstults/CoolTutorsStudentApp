@@ -49,6 +49,16 @@ public class OpeningsReply {
         }
     }
 
+    public List<Opening> getOpenings(String filter) {
+        List<Opening> filteredOpenings = new ArrayList();
+        for (Opening opening : allOpenings) {
+            if (opening.instructorName.contains(filter) || opening.instructorId.equals(filter)) {
+                filteredOpenings.add(opening);
+            }
+        }
+        return filteredOpenings;
+    }
+
     public List<Opening> getOpenings() {
         return this.allOpenings;
     }

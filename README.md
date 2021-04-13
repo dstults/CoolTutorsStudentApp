@@ -1,12 +1,11 @@
-# CoolTutorsStudentApp
- Companion App for CoolTutors.org. CoolTutors.org is a demo website hosting a teacher-student scheduling platform I'm currently working on, currently codenamed "teachersFirst". The app presently is only a browser for your personal info, that will eventually be able to do all the same features that can be found via web access, including make new appointments, cancel appointments, make new openings, cancel openings, and so on.
+# Android App for interfacing teachersFirst MVC server to Android cell phones
+Companion App for the teachersFirst repository. The teachersFirst project is an MVC server deployment that in addition to hosting a teacher-student scheduling platform that is accessible via webpage, it additionally can output JSON which is read by this companion app to aid in the operation of the website.
 
-### Hyperlinks:
-- https://cooltutors.org
-- https://darrens.lwtech-csd297.com
-
-### Code repository:
-(not yet published)
+### Parent Project:
+- https://github.com/dstults/teachersFirst
+### Example Servers:
+- https://cooltutors.org (production)
+- https://darrens.lwtech-csd297.com (development)
 
 ## App preliminary screenshots from initial commit
 

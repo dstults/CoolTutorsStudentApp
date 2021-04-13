@@ -98,7 +98,13 @@ public class OpeningsFragment extends Fragment implements LoaderManager.LoaderCa
         // Add Opening Data to Fragment
         // ---------------------------------------------------------------------------
         OpeningsReply or = new OpeningsReply(data);
-        openingList = or.getOpenings();
+        String filter = SharedPrefs.getSelectedMember();
+        if (filter.isEmpty()) {
+            openingList = or.getOpenings();
+        } else {
+            openingList = or.getOpenings(filter);
+            SharedPrefs.setSelectedMember("");
+        }
         openingRecyclerAdapter = new OpeningRecyclerAdapter(openingList, this);
         openingRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         openingRecycler.setAdapter(openingRecyclerAdapter);

@@ -10,7 +10,11 @@
         android:name="org.cooltutors.student.ui.services.ServicesFragment"
         android:label="@string/title_services"
         android:titleTextColor="@color/black"
-        tools:layout="@layout/fragment_services" />
+        tools:layout="@layout/fragment_services" >
+        <action
+            android:id="@+id/action_navigation_services_to_navigation_openings"
+            app:destination="@id/navigation_openings" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_openings"
