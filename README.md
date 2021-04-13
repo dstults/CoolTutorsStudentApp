@@ -1,4 +1,4 @@
-# CoolTutorsStudentApp
+# Android App for interfacing teachersFirst MVC server to Android cell phones
 Companion App for the teachersFirst repository. The teachersFirst project is an MVC server deployment that in addition to hosting a teacher-student scheduling platform that is accessible via webpage, it additionally can output JSON which is read by this companion app to aid in the operation of the website.
 
 ### Parent Project:
